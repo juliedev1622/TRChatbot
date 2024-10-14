@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toyota Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Chatbot Button -->
+  <div id="chat-circle" class="chat-button">
+    Let's Chat
+  </div>
+
+  <!-- Chatbox -->
+  <div id="chat-box" class="chat-box">
+    <div class="chat-header">
+      <span>Hi, I’m Mary Rose 👋, how can I help you?</span>
+      <button id="close-chat" class="close-btn">✖</button>
+    </div>
+    <div class="chat-body">
+      <div class="suggested-questions">
+        <button class="question-btn" onclick="sendAnswer('contact-info')">What's your contact number?</button>
+        <button class="question-btn" onclick="sendAnswer('requirements')">What are the requirements, how to apply?</button>
+        <button class="question-btn" onclick="sendAnswer('quote')">Can I get a quote?</button>
+        <button class="question-btn" onclick="sendAnswer('approval')">How fast can I get approved?</button>
+      </div>
+      <div id="chat-log" class="chat-log"></div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Type your message here..." onkeydown="if(event.key === 'Enter') sendMessage()">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
